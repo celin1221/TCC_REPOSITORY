@@ -1,6 +1,6 @@
 cell_t = sprite_get_height(spr_wall);
 
-room_width = cell_t *60;
+room_width = cell_t *40;
 room_height = room_width div 2;
 
 cell_h = room_width div cell_t;
