@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"obj_timer","path":"objects/obj_timer/obj_timer.yy",},"order":5,},
+    {"id":{"name":"spr_sword","path":"sprites/spr_sword/spr_sword.yy",},"order":6,},
     {"id":{"name":"obj_map","path":"objects/obj_map/obj_map.yy",},"order":3,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":5,},
@@ -13,6 +14,7 @@
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":7,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
     {"id":{"name":"spr_grass","path":"sprites/spr_grass/spr_grass.yy",},"order":4,},
+    {"id":{"name":"obj_sword","path":"objects/obj_sword/obj_sword.yy",},"order":8,},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":0,},
     {"id":{"name":"Ambiente1","path":"rooms/Ambiente1/Ambiente1.yy",},"order":0,},
   ],
