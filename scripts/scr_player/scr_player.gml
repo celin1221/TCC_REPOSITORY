@@ -77,6 +77,7 @@ function scr_player_andando(){
 			break;
 		}
 	}
+	#region Dash
 	if(estamina >=10){
 		if(keyboard_check_pressed(vk_space)){
 			estamina-=10;
@@ -86,6 +87,30 @@ function scr_player_andando(){
 			state = scr_player_dash;
 		}
 	}
+	#endregion
+	if(mouse_check_button_pressed(mb_left)){
+		image_index = 0;
+		switch dir{
+			default:
+				//direita
+				sprite_index = spr_player_walkAtack_left_sword;
+				image_xscale = -1;
+			break;
+			case 1:
+				//cima
+				sprite_index = spr_player_walk_up;
+			break;
+			case 2:
+				//esquerda
+				sprite_index = spr_player_walkAtack_left_sword;
+				image_xscale = 1;
+			break;
+			case 3:
+				//baixo
+			break;
+		}
+		state = scr_player_swordAtack;
+	}
 }
 
 function scr_player_dash(){
@@ -94,4 +119,10 @@ function scr_player_dash(){
 	velv = lengthdir_y(dash_velc, dash_dir);
 	
 
+}
+function scr_player_swordAtack(){
+	
+	if(animation_end()){
+		state = scr_player_andando;
+	}
 }

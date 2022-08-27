@@ -1,6 +1,6 @@
 cell_t = sprite_get_height(spr_wall);
 
-room_width = cell_t *40;
+room_width = cell_t *30;
 room_height = room_width div 2;
 
 cell_h = room_width div cell_t;
@@ -17,8 +17,8 @@ var xx = cell_h div 2;
 var yy = cell_v div 2;
 
 var chances = 1;
-var passos = 1000;
-var max_spawner = 7;
+var passos = 500;
+var max_spawner = 10;
 
 for(var i = 0; i<passos ; i+=1){
 	
@@ -46,9 +46,9 @@ for(var xx = 0; xx<cell_h; xx+=1){
 			}
 			
 			if(max_spawner>0){
-				var chances = 5;
+				var chances = 60;
 				var distance = 100
-				if(irandom(100)<chances && point_distance(x1,y1,obj_player.x, obj_player.y) > distance){
+				if(irandom(1000)<chances && point_distance(x1,y1,obj_player.x, obj_player.y) > distance){
 				instance_create_layer(x1,y1, "Instances", obj_spawn);
 				max_spawner-=1;
 				}

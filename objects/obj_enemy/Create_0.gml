@@ -1,3 +1,3 @@
 
 caminho = path_add();
-velc = 2.0;
+velc = 1.0;

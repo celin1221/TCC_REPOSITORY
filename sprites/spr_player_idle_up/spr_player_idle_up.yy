@@ -77,8 +77,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "player",
-    "path": "folders/Sprites/player.yy",
+    "name": "no weapon",
+    "path": "folders/Sprites/player/no weapon.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_player_idle_up",
