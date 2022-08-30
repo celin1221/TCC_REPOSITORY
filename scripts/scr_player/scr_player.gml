@@ -1,5 +1,18 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function scr_player_anda(){
+	var dir_right = keyboard_check(ord("D"));
+	var dir_left = keyboard_check(ord("A"));
+	var dir_up = keyboard_check(ord("W"));
+	var dir_down = keyboard_check(ord("S"));
+
+	var walk = dir_right - dir_left != 0 || dir_down - dir_up != 0;
+
+	move_dir = point_direction(0,0,dir_right - dir_left, dir_down - dir_up);
+	
+		velh = lengthdir_x(velc*walk, move_dir);
+		velv = lengthdir_y(velc*walk, move_dir);
+}
 function scr_player_collision(){
 	if(place_meeting(x+velh, y , obj_wall)){
 		while(!place_meeting(x+sign(velh), y, obj_wall)){
@@ -19,17 +32,9 @@ function scr_player_collision(){
 
 }
 function scr_player_andando(){
-	var dir_right = keyboard_check(ord("D"));
-	var dir_left = keyboard_check(ord("A"));
-	var dir_up = keyboard_check(ord("W"));
-	var dir_down = keyboard_check(ord("S"));
+	scr_player_anda();	
 
-	var walk = dir_right - dir_left != 0 || dir_down - dir_up != 0;
 
-	move_dir = point_direction(0,0,dir_right - dir_left, dir_down - dir_up);
-
-	velh = lengthdir_x(velc*walk, move_dir);
-	velv = lengthdir_y(velc*walk, move_dir);
 	
 	scr_player_collision();
 
@@ -89,11 +94,13 @@ function scr_player_andando(){
 	}
 	#endregion
 	if(mouse_check_button_pressed(mb_left)){
+		ds_list_clear(inimigos_atingidos);
 		image_index = 0;
 		switch dir{
 			default:
 				//direita
 				sprite_index = spr_player_walkAtack_left_sword;
+				mask_index = spr_player_walkAtack_left_sword_hb;
 				image_xscale = -1;
 			break;
 			case 1:
@@ -103,6 +110,7 @@ function scr_player_andando(){
 			case 2:
 				//esquerda
 				sprite_index = spr_player_walkAtack_left_sword;
+				mask_index = spr_player_walkAtack_left_sword_hb;
 				image_xscale = 1;
 			break;
 			case 3:
@@ -114,6 +122,7 @@ function scr_player_andando(){
 }
 
 function scr_player_dash(){
+	tomar_dano = false;
 	scr_player_collision();
 	velh = lengthdir_x(dash_velc, dash_dir);
 	velv = lengthdir_y(dash_velc, dash_dir);
@@ -121,8 +130,47 @@ function scr_player_dash(){
 
 }
 function scr_player_swordAtack(){
+	scr_player_anda();
+	
+	var inimigos_na_hitbox = ds_list_create();
+	
+	var inimigos = instance_place_list(x,y, par_enemy, inimigos_na_hitbox, false);
+	
+	if(inimigos > 0){
+		for(var i = 0; i < inimigos; i++){
+			var InimigosID = inimigos_na_hitbox[| i];
+			
+			if(ds_list_find_index(inimigos_atingidos, InimigosID) == -1){
+				ds_list_add(inimigos_atingidos, InimigosID);
+				
+				with(InimigosID){
+					vida -= obj_player.dano;
+					var _dir = point_direction(obj_player.x, obj_player.y, other.x, other.y);
+					empurrar_dir = _dir;
+					empurrar_velc = 6;
+					state = scr_enemy_hit;
+					alarm[0] = 5;
+					hit = true;
+				}
+			}
+		}
+	}
+	ds_list_destroy(inimigos_na_hitbox);
 	
 	if(animation_end()){
+		mask_index = spr_player_idle_left;
+		state = scr_player_andando;
+	}
+}
+
+function scr_player_hit(){
+	if(alarm[2]>0){
+	scr_player_collision();
+	velh = lengthdir_x(3, empurrar_dir);
+	velv = lengthdir_y(3, empurrar_dir);
+	
+	
+	}else{
 		state = scr_player_andando;
 	}
 }

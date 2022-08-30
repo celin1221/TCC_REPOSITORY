@@ -1,2 +1,12 @@
 draw_self();
-draw_text(x+32,y,estamina);
+draw_text(x+32,y,vida);
+if(alarm[3]>0){
+	if(image_alpha >= 1){
+		dano_alfa = -0.05;
+	}else if(image_alpha <=0){
+		dano_alfa = 0.05;
+	}
+	image_alpha += dano_alfa;
+}else{
+	image_alpha = 1;
+}
