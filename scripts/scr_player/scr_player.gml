@@ -34,8 +34,6 @@ function scr_player_collision(){
 function scr_player_andando(){
 	scr_player_anda();	
 
-
-	
 	scr_player_collision();
 
 	//Animation
@@ -166,8 +164,8 @@ function scr_player_swordAtack(){
 function scr_player_hit(){
 	if(alarm[2]>0){
 	scr_player_collision();
-	velh = lengthdir_x(3, empurrar_dir);
-	velv = lengthdir_y(3, empurrar_dir);
+	velh = lengthdir_x(2, empurrar_dir);
+	velv = lengthdir_y(2, empurrar_dir);
 	
 	
 	}else{
