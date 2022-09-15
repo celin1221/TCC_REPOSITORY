@@ -3,6 +3,6 @@
 Projeto desenvolvido por:
 
 - João Paulo Sacre Vargas
-- Leonardo Vieira Martins
+- Leonardo Martins de Oliveira Vieira
 - Marcelo Vieira Gomes
 - Rafael Soares Silva
