@@ -21,8 +21,8 @@ function scr_enemy_walk(){
 	cell_t = obj_map.cell_t
 	var x1 = x;
 	var y1 = y;
-	var x2 = (obj_player.x div cell_t)*cell_t+16;
-	var y2 = (obj_player.y div cell_t)*cell_t+16;
+	var x2 = obj_player.x
+	var y2 = obj_player.y
 	
 	if(x1 > x2){
 		image_xscale = -1;
