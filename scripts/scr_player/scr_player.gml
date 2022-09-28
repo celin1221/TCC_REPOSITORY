@@ -57,6 +57,7 @@ function scr_player_andando(){
 			break;
 			case 3:
 				//baixo
+				sprite_index = spr_player_walk_down
 			break;
 		}
 	}else{
@@ -77,6 +78,7 @@ function scr_player_andando(){
 			break;
 			case 3:
 				//baixo
+				sprite_index = spr_player_walk_down
 			break;
 		}
 	}
@@ -103,7 +105,8 @@ function scr_player_andando(){
 			break;
 			case 1:
 				//cima
-				sprite_index = spr_player_walk_up;
+				sprite_index = spr_player_walkAtack_up_sword;
+				mask_index = spr_player_walkAtack_up_sword_hb;
 			break;
 			case 2:
 				//esquerda
@@ -113,6 +116,8 @@ function scr_player_andando(){
 			break;
 			case 3:
 				//baixo
+				sprite_index = spr_player_walkAtack_down_sword;
+				mask_index = spr_player_walkAtack_down_sword_hb;
 			break;
 		}
 		state = scr_player_swordAtack;
