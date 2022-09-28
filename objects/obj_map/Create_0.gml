@@ -17,7 +17,7 @@ var xx = cell_h div 2;
 var yy = cell_v div 2;
 
 var chances = 1;
-var passos = 500;
+var passos = 1000;
 var max_spawner = 10;
 
 for(var i = 0; i<passos ; i+=1){

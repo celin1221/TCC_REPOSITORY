@@ -132,7 +132,6 @@ function scr_player_dash(){
 	scr_player_collision();
 	velh = lengthdir_x(dash_velc, dash_dir);
 	velv = lengthdir_y(dash_velc, dash_dir);
-	
 
 }
 function scr_player_swordAtack(){
