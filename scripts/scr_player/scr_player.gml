@@ -93,6 +93,7 @@ function scr_player_andando(){
 		}
 	}
 	#endregion
+	#region Atack
 	if(mouse_check_button_pressed(mb_left)){
 		ds_list_clear(inimigos_atingidos);
 		image_index = 0;
@@ -122,7 +123,9 @@ function scr_player_andando(){
 		}
 		state = scr_player_swordAtack;
 	}
+	#endregion
 }
+
 
 function scr_player_dash(){
 	tomar_dano = false;
@@ -147,11 +150,11 @@ function scr_player_swordAtack(){
 				ds_list_add(inimigos_atingidos, InimigosID);
 				
 				with(InimigosID){
-					vida -= obj_player.dano;
+					state = scr_enemy_hit;
 					var _dir = point_direction(obj_player.x, obj_player.y, other.x, other.y);
 					empurrar_dir = _dir;
 					empurrar_velc = 6;
-					state = scr_enemy_hit;
+					vida -= obj_player.dano;
 					alarm[0] = 5;
 					hit = true;
 				}

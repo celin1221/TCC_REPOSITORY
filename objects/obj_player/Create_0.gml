@@ -19,7 +19,6 @@ state = scr_player_andando;
 max_estamina = 100;
 estamina = max_estamina;
 
-max_vida = 100;
 vida = 100;
 tomar_dano = true;
 empurrar_dir = 0;
