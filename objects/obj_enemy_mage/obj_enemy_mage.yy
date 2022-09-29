@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_enemy_mage",
   "spriteId": {
     "name": "spr_enemy_mage",
     "path": "sprites/spr_enemy_mage/spr_enemy_mage.yy",
@@ -31,8 +34,4 @@
     "name": "Objetos",
     "path": "folders/Objetos.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_enemy_mage",
-  "tags": [],
-  "resourceType": "GMObject",
 }
