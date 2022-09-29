@@ -7,7 +7,7 @@ var vida = obj_player.vida;
 var vida_max = 100
 
 var posicao_fill = (28 * (1 - (vida/vida_max))) * 3
-show_debug_message(posicao_fill);
+
 
 
 //HUD
