@@ -1,5 +1,4 @@
 draw_self();
-draw_text(x+32,y,vida);
 if(alarm[3]>0){
 	if(image_alpha >= 1){
 		dano_alfa = -0.05;
