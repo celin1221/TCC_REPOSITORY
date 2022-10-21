@@ -11,11 +11,11 @@
     {"id":{"name":"spr_player_walkAtack_down_sword","path":"sprites/spr_player_walkAtack_down_sword/spr_player_walkAtack_down_sword.yy",},"order":6,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_player_walkAtack_up_sword","path":"sprites/spr_player_walkAtack_up_sword/spr_player_walkAtack_up_sword.yy",},"order":4,},
-    {"id":{"name":"Sprite22","path":"sprites/Sprite22/Sprite22.yy",},"order":12,},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":5,},
     {"id":{"name":"spr_spawn","path":"sprites/spr_spawn/spr_spawn.yy",},"order":2,},
     {"id":{"name":"scr_enemy","path":"scripts/scr_enemy/scr_enemy.yy",},"order":2,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":1,},
+    {"id":{"name":"spr_tile_ground","path":"sprites/spr_tile_ground/spr_tile_ground.yy",},"order":12,},
     {"id":{"name":"spr_player_walk_down","path":"sprites/spr_player_walk_down/spr_player_walk_down.yy",},"order":4,},
     {"id":{"name":"spr_player_walk_left_sword","path":"sprites/spr_player_walk_left_sword/spr_player_walk_left_sword.yy",},"order":1,},
     {"id":{"name":"obj_spawn","path":"objects/obj_spawn/obj_spawn.yy",},"order":4,},
@@ -31,6 +31,7 @@
     {"id":{"name":"obj_grass","path":"objects/obj_grass/obj_grass.yy",},"order":6,},
     {"id":{"name":"spr_player_walk_up","path":"sprites/spr_player_walk_up/spr_player_walk_up.yy",},"order":3,},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":10,},
+    {"id":{"name":"Ground_tiles","path":"tilesets/Ground_tiles/Ground_tiles.yy",},"order":0,},
     {"id":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},"order":12,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
     {"id":{"name":"spr_grass","path":"sprites/spr_grass/spr_grass.yy",},"order":4,},
@@ -85,6 +86,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.9.0.49",
+    "IDEVersion": "2022.9.1.51",
   },
 }

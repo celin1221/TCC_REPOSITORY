@@ -20,6 +20,8 @@ var chances = 1;
 var passos = 1000;
 var max_spawner = 10;
 
+var tile_layer = layer_tilemap_get_id("Ground_Tile");
+
 for(var i = 0; i<passos ; i+=1){
 	
 	dir = irandom(3);
@@ -53,7 +55,22 @@ for(var xx = 0; xx<cell_h; xx+=1){
 				max_spawner-=1;
 				}
 			}
-			instance_create_layer(x1,y1, "Instances_Tile", obj_grass);
+			var g_sort = irandom(1000);
+			if(g_sort<=300){
+				tilemap_set(tile_layer,1,xx,yy);
+			}else if(g_sort>300 and g_sort<= 600){
+				tilemap_set(tile_layer, 2, xx, yy);
+			}else if(g_sort>600 and g_sort<= 700){
+				tilemap_set(tile_layer, 3, xx, yy);
+			}else if(g_sort>700 and g_sort<= 800){
+				tilemap_set(tile_layer, 4, xx, yy);
+			}else if(g_sort>800 and g_sort<= 950){
+				tilemap_set(tile_layer, 5, xx, yy);
+			}else if(g_sort>950 and g_sort<= 975){
+				tilemap_set(tile_layer, 6, xx, yy);
+			}else if(g_sort>975){
+				tilemap_set(tile_layer, 7, xx, yy);
+			}
 		}
 	}
 }
