@@ -154,13 +154,14 @@ function scr_player_swordAtack(){
 					empurrar_dir = _dir;
 					empurrar_velc = 6;
 					vida -= obj_player.dano;
-					alarm[0] = 20;
+					alarm[0] = 5;
 					hit = true;
 				}
 			}
 		}
 	}
 	ds_list_destroy(inimigos_na_hitbox);
+	
 	
 	if(animation_end()){
 		mask_index = spr_player_idle_left;

@@ -17,7 +17,7 @@ if(pause){
 	if(point_in_rectangle(_mx, _my, resW/2 - string_width("VOLTAR AO MENU"), resH/2 - string_height("J"), resW/2 + string_width("VOLTAR AO MENU"), resH/2 +  2 *(string_height("J")))){
 		
 		if(mouse_check_button_pressed(mb_left)){
-			//TEM QUE ARRUMAR ISSO AQUI (14:10)
+			//TEM QUE ARRUMAR ISSO AQUI (30/12)
 			
 			pause = false;
 			if(surface_exists(pauseSurf)){

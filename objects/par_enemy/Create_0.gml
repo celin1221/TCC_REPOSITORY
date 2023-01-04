@@ -1,8 +1,9 @@
+randomize();
 
 caminho = path_add();
 velh = -1;
 velv = -1;
-velc = 1.0;
+velc = random_range(0.95, 1.05);
 dir = -1;
 state = scr_enemy_walk;
 
