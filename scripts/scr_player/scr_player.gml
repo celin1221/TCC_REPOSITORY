@@ -1,5 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+global.level = 0;
+global.kill_count = 0;
+global.kill_need= 20;
 function scr_player_anda(){
 	var dir_right = keyboard_check(ord("D"));
 	var dir_left = keyboard_check(ord("A"));

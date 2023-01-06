@@ -1,5 +1,5 @@
-global.level = 0;
-global.kill_count = 0;
+
+
 cell_t = sprite_get_height(spr_wall);
 
 room_width = cell_t *30;
