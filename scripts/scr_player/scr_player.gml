@@ -155,13 +155,8 @@ function scr_player_swordAtack(){
 					empurrar_velc = 15;
 					state = scr_enemy_hit;
 					vida -= obj_player.dano;
-<<<<<<< Updated upstream
-					alarm[0] = 5;
-					hit = true;
-=======
 					alarm[0] = 180;
 					
->>>>>>> Stashed changes
 				}
 			}
 		}
