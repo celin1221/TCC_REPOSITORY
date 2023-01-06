@@ -149,13 +149,19 @@ function scr_player_swordAtack(){
 				ds_list_add(inimigos_atingidos, InimigosID);
 				
 				with(InimigosID){
+					hit = true;
+					var direcao = point_direction(obj_player.x, obj_player.y, obj_enemy.x, obj_enemy.y);
+					empurrar_dir = direcao;
+					empurrar_velc = 15;
 					state = scr_enemy_hit;
-					var _dir = point_direction(obj_player.x, obj_player.y, other.x, other.y);
-					empurrar_dir = _dir;
-					empurrar_velc = 6;
 					vida -= obj_player.dano;
+<<<<<<< Updated upstream
 					alarm[0] = 5;
 					hit = true;
+=======
+					alarm[0] = 180;
+					
+>>>>>>> Stashed changes
 				}
 			}
 		}
