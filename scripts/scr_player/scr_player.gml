@@ -98,33 +98,37 @@ function scr_player_andando(){
 	#endregion
 	#region Atack
 	if(mouse_check_button_pressed(mb_left)){
-		ds_list_clear(inimigos_atingidos);
-		image_index = 0;
-		switch dir{
-			default:
-				//direita
-				sprite_index = spr_player_walkAtack_left_sword;
-				mask_index = spr_player_walkAtack_left_sword_hb;
-				image_xscale = -1;
-			break;
-			case 1:
-				//cima
-				sprite_index = spr_player_walkAtack_up_sword;
-				mask_index = spr_player_walkAtack_up_sword_hb;
-			break;
-			case 2:
-				//esquerda
-				sprite_index = spr_player_walkAtack_left_sword;
-				mask_index = spr_player_walkAtack_left_sword_hb;
-				image_xscale = 1;
-			break;
-			case 3:
-				//baixo
-				sprite_index = spr_player_walkAtack_down_sword;
-				mask_index = spr_player_walkAtack_down_sword_hb;
-			break;
+		if(usandoMelee){
+			ds_list_clear(inimigos_atingidos);
+			image_index = 0;
+			switch dir{
+				default:
+					//direita
+					sprite_index = spr_player_walkAtack_left_sword;
+					mask_index = spr_player_walkAtack_left_sword_hb;
+					image_xscale = -1;
+				break;
+				case 1:
+					//cima
+					sprite_index = spr_player_walkAtack_up_sword;
+					mask_index = spr_player_walkAtack_up_sword_hb;
+				break;
+				case 2:
+					//esquerda
+					sprite_index = spr_player_walkAtack_left_sword;
+					mask_index = spr_player_walkAtack_left_sword_hb;
+					image_xscale = 1;
+				break;
+				case 3:
+					//baixo
+					sprite_index = spr_player_walkAtack_down_sword;
+					mask_index = spr_player_walkAtack_down_sword_hb;
+				break;
 		}
-		state = scr_player_swordAtack;
+		}
+		if(usandoMelee){
+			state = scr_player_swordAtack;
+		}
 	}
 	#endregion
 }
