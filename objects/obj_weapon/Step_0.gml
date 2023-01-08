@@ -50,6 +50,7 @@ if(instance_exists(weapon_id)){
 			alarm[0] = projetil_delay
 		} else if (weapon < 9){
 			var inimigo = instance_nearest(obj_crosshair.x, obj_crosshair.y, par_enemy);
+			var obstaculos_1 = instance_nearest(obj_crosshair.x, obj_crosshair.y, obj_stone1);
 			
 			if(inimigo != noone){
 				if((inimigo.x - x) <= 150 and (inimigo.y - y) <= 150){
@@ -63,6 +64,7 @@ if(instance_exists(weapon_id)){
 					
 						if(inimigo.hit == false){
 							inimigo.vida -= projetil_dano;
+							obstaculos_1.vida -= projetil_dano;
 							inimigo.hit = true;
 							inimigo.alarm[0] = 15
 							

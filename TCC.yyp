@@ -45,6 +45,7 @@
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
     {"id":{"name":"spr_grass","path":"sprites/spr_grass/spr_grass.yy",},"order":4,},
     {"id":{"name":"spr_player_idle_up","path":"sprites/spr_player_idle_up/spr_player_idle_up.yy",},"order":1,},
+    {"id":{"name":"obj_stone1","path":"objects/obj_stone1/obj_stone1.yy",},"order":19,},
     {"id":{"name":"obj_projetil","path":"objects/obj_projetil/obj_projetil.yy",},"order":15,},
     {"id":{"name":"spr_player_idle_left_sword","path":"sprites/spr_player_idle_left_sword/spr_player_idle_left_sword.yy",},"order":0,},
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},"order":11,},
@@ -56,6 +57,7 @@
     {"id":{"name":"obj_projetil_area","path":"objects/obj_projetil_area/obj_projetil_area.yy",},"order":16,},
     {"id":{"name":"spr_player_idle_left","path":"sprites/spr_player_idle_left/spr_player_idle_left.yy",},"order":0,},
     {"id":{"name":"par_enemy","path":"objects/par_enemy/par_enemy.yy",},"order":9,},
+    {"id":{"name":"spr_stone1","path":"sprites/spr_stone1/spr_stone1.yy",},"order":14,},
     {"id":{"name":"Ambiente1","path":"rooms/Ambiente1/Ambiente1.yy",},"order":0,},
   ],
   "Options": [

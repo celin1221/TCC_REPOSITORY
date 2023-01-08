@@ -69,7 +69,8 @@ for(var xx = 0; xx<cell_h; xx+=1){
 			}else if(g_sort>800 and g_sort<= 950){
 				tilemap_set(tile_layer, 5, xx, yy);
 			}else if(g_sort>950 and g_sort<= 975){
-				tilemap_set(tile_layer, 6, xx, yy);
+				tilemap_set(tile_layer, 5, xx, yy);
+				instance_create_layer(x1,y1,"Instances_Tile",obj_stone1);
 			}else if(g_sort>975){
 				tilemap_set(tile_layer, 7, xx, yy);
 			}

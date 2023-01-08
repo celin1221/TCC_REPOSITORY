@@ -1,14 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_enemy_collision(){
-	if(place_meeting(x+velh, y , obj_wall)){
-		while(!place_meeting(x+sign(velh), y, obj_wall)){
+	if(place_meeting(x+velh, y , obj_wall) or place_meeting(x+velh, y , obj_stone1)){
+		while(!place_meeting(x+sign(velh), y, obj_wall) or place_meeting(x+velh, y , obj_stone1)){
 			x+=sign(velh);
 		}
 	velh=0;
 	}
-	if(place_meeting(x, y+velv , obj_wall)){
-		while(!place_meeting(x, y+sign(velv), obj_wall)){
+	if(place_meeting(x, y+velv , obj_wall) or place_meeting(x+velh, y , obj_stone1)){
+		while(!place_meeting(x, y+sign(velv), obj_wall) or place_meeting(x+velh, y , obj_stone1)){
 			y+=sign(velv);
 		}
 		velv=0;

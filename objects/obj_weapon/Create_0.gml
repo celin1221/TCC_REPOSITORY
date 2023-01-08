@@ -5,7 +5,7 @@ weapon_y = 0;
 can_shoot = true;
 atirando = false;
 
-weapon = 7; //ARMA USADA NO MOMENTO
+weapon = 1; //ARMA USADA NO MOMENTO
 
 armas[0] = ds_map_create();
 
