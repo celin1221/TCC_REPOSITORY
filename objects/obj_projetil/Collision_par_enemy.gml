@@ -8,11 +8,9 @@ if(explosivo == false){
 	}
 	other.hit = true;
 	other.alarm[0] = 15
-	var i = 0
 
 	if(efeitos[0] == "Slow"){
 		other.velc = other.velc - ((efeitos[1] / 100) * other.velc);
-		i += 1;
 	}
 
 	if (perfurante == false){

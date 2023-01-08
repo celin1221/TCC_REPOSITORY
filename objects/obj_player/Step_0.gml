@@ -19,6 +19,9 @@ if(!usandoMelee){
 			weapon_dir = point_direction(x, y, mouse_x, mouse_y)
 			if(mb){
 				atirar();
+				atirando = true;
+			} else {
+				atirando = false;
 			}
 		}
 	}

@@ -3,8 +3,9 @@ weapon_dir = -1;
 weapon_x = 0;
 weapon_y = 0;
 can_shoot = true;
+atirando = false;
 
-weapon = 5; //ARMA USADA NO MOMENTO
+weapon = 7; //ARMA USADA NO MOMENTO
 
 armas[0] = ds_map_create();
 
@@ -55,7 +56,6 @@ ds_map_add(armas[3], "vel_projetil", 4);
 ds_map_add(armas[3], "projetil_dano", 3);
 ds_map_add(armas[3], "projetil_delay", 15);
 ds_map_add(armas[3], "automatic", true);
-//Tipo de efeito | Valor dele (%slow) | Quantos inimigos (SÓ PRO ELETRICO)
 ds_map_add(armas[3], "effect", [noone]);
 ds_map_add(armas[3], "projetil_quant", 1);
 ds_map_add(armas[3], "perfurante", true);
@@ -78,14 +78,43 @@ ds_map_add(armas[4], "explosivo", true);
 armas[5] = ds_map_create();
 ds_map_add(armas[5], "sprite", spr_teste);
 ds_map_add(armas[5], "projetil", spr_teste_raio);
-ds_map_add(armas[5], "vel_projetil", 2);
-ds_map_add(armas[5], "projetil_dano", 10);
-ds_map_add(armas[5], "projetil_delay", 10);
+ds_map_add(armas[5], "vel_projetil", 0);
+ds_map_add(armas[5], "projetil_dano", 2);
+ds_map_add(armas[5], "projetil_delay", 15);
 ds_map_add(armas[5], "automatic", true);
 ds_map_add(armas[5], "effect", [noone]);
 ds_map_add(armas[5], "projetil_quant", 1);
 ds_map_add(armas[5], "perfurante", false);
 ds_map_add(armas[5], "explosivo", false);
+
+//CAJADO DE GELO
+armas[6] = ds_map_create();
+ds_map_add(armas[6], "sprite", spr_teste);
+ds_map_add(armas[6], "projetil", spr_teste_raio);
+ds_map_add(armas[6], "vel_projetil", 0);
+ds_map_add(armas[6], "projetil_dano", 2);
+ds_map_add(armas[6], "projetil_delay", 15);
+ds_map_add(armas[6], "automatic", true);
+//Tipo de efeito | Valor dele (%slow) | Quantos inimigos (SÓ PRO ELETRICO)
+ds_map_add(armas[6], "effect", ["Slow", 5, 0]);
+ds_map_add(armas[6], "projetil_quant", 1);
+ds_map_add(armas[6], "perfurante", false);
+ds_map_add(armas[6], "explosivo", true);
+
+//CAJADO ELÉTRICO
+armas[7] = ds_map_create();
+ds_map_add(armas[7], "sprite", spr_teste);
+ds_map_add(armas[7], "projetil", spr_teste_raio);
+ds_map_add(armas[7], "vel_projetil", 0);
+ds_map_add(armas[7], "projetil_dano", 1);
+ds_map_add(armas[7], "projetil_delay", 15);
+ds_map_add(armas[7], "automatic", true);
+//Tipo de efeito | Valor dele (%slow) | Quantos inimigos (SÓ PRO ELETRICO)
+ds_map_add(armas[7], "effect", ["Elétrico", 2, 5]);
+ds_map_add(armas[7], "projetil_quant", 1);
+ds_map_add(armas[7], "perfurante", false);
+ds_map_add(armas[7], "explosivo", false);
+
 
 
 var map = armas[weapon];

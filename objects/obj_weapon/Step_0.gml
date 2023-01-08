@@ -53,12 +53,28 @@ if(instance_exists(weapon_id)){
 			
 			if(inimigo != noone){
 				if((inimigo.x - x) <= 150 and (inimigo.y - y) <= 150){
-					// NAO SEI COMO FAZER O SPRITE DO RAIO INDO
-					if(inimigo.hit == false){
-						inimigo.vida -= projetil_dano;
+					if(explosivo == true){
+						if (inimigo.hit == false){
+							var explosao = instance_create_layer(obj_crosshair.x, obj_crosshair.y, "Projeteis", obj_projetil_area);
+							explosao.damage = projetil_dano;
+							explosao.efeitos = effect;
+						}
+					} else {
+					
+						if(inimigo.hit == false){
+							inimigo.vida -= projetil_dano;
+							inimigo.hit = true;
+							inimigo.alarm[0] = 15
+							
+							if (effect[0] == "Elétrico"){
+								var raiozin = instance_create_layer(inimigo.x, inimigo.y, "Projeteis", obj_raio);
+								raiozin.dano = effect[1];
+								raiozin.range = effect[2];
+							}
+						}
 					}
-					inimigo.hit = true;
-					inimigo.alarm[0] = 15
+					
+					
 				}
 				can_shoot = false;
 				alarm[0] = projetil_delay
