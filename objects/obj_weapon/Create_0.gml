@@ -4,7 +4,7 @@ weapon_x = 0;
 weapon_y = 0;
 can_shoot = true;
 
-weapon = 1; //ARMA USADA NO MOMENTO
+weapon = 5; //ARMA USADA NO MOMENTO
 
 armas[0] = ds_map_create();
 
@@ -16,16 +16,77 @@ ds_map_add(armas[0], "vel_projetil", 0);
 ds_map_add(armas[0], "projetil_dano", 0);
 ds_map_add(armas[0], "projetil_delay", 0);
 ds_map_add(armas[0], "automatic", false);
-
+ds_map_add(armas[0], "effect", [noone]);
+ds_map_add(armas[0], "projetil_quant", 0);
+ds_map_add(armas[0], "perfurante", false);
+ds_map_add(armas[0], "explosivo", false);
 
 //ARCO PADRAO
 armas[1] = ds_map_create();
 ds_map_add(armas[1], "sprite", spr_teste);
 ds_map_add(armas[1], "projetil", spr_teste_projetil);
 ds_map_add(armas[1], "vel_projetil", 3);
-ds_map_add(armas[1], "projetil_dano", 10);
-ds_map_add(armas[1], "projetil_delay", 20);
+ds_map_add(armas[1], "projetil_dano", 5);
+ds_map_add(armas[1], "projetil_delay", 25);
 ds_map_add(armas[1], "automatic", false);
+ds_map_add(armas[1], "effect", [noone]);
+ds_map_add(armas[1], "projetil_quant", 1);
+ds_map_add(armas[1], "perfurante", false);
+ds_map_add(armas[1], "explosivo", false);
+
+//ARCO COM TRES FLECHAS
+armas[2] = ds_map_create();
+ds_map_add(armas[2], "sprite", spr_teste);
+ds_map_add(armas[2], "projetil", spr_teste_projetil);
+ds_map_add(armas[2], "vel_projetil", 5);
+ds_map_add(armas[2], "projetil_dano", 5);
+ds_map_add(armas[2], "projetil_delay", 25);
+ds_map_add(armas[2], "automatic", true);
+ds_map_add(armas[2], "effect", [noone]);
+ds_map_add(armas[2], "projetil_quant", 3);
+ds_map_add(armas[2], "perfurante", false);
+ds_map_add(armas[2], "explosivo", false);
+
+//ARCO PERFURANTE
+armas[3] = ds_map_create();
+ds_map_add(armas[3], "sprite", spr_teste);
+ds_map_add(armas[3], "projetil", spr_teste_projetil);
+ds_map_add(armas[3], "vel_projetil", 4);
+ds_map_add(armas[3], "projetil_dano", 3);
+ds_map_add(armas[3], "projetil_delay", 15);
+ds_map_add(armas[3], "automatic", true);
+//Tipo de efeito | Valor dele (%slow) | Quantos inimigos (SÓ PRO ELETRICO)
+ds_map_add(armas[3], "effect", [noone]);
+ds_map_add(armas[3], "projetil_quant", 1);
+ds_map_add(armas[3], "perfurante", true);
+ds_map_add(armas[3], "explosivo", false);
+
+//ARCO EXPLOSIVO
+armas[4] = ds_map_create();
+ds_map_add(armas[4], "sprite", spr_teste);
+ds_map_add(armas[4], "projetil", spr_teste_projetil);
+ds_map_add(armas[4], "vel_projetil", 2);
+ds_map_add(armas[4], "projetil_dano", 6);
+ds_map_add(armas[4], "projetil_delay", 25);
+ds_map_add(armas[4], "automatic", false);
+ds_map_add(armas[4], "effect", [noone]);
+ds_map_add(armas[4], "projetil_quant", 1);
+ds_map_add(armas[4], "perfurante", false);
+ds_map_add(armas[4], "explosivo", true);
+
+//CAJADO PADRÃO
+armas[5] = ds_map_create();
+ds_map_add(armas[5], "sprite", spr_teste);
+ds_map_add(armas[5], "projetil", spr_teste_raio);
+ds_map_add(armas[5], "vel_projetil", 2);
+ds_map_add(armas[5], "projetil_dano", 10);
+ds_map_add(armas[5], "projetil_delay", 10);
+ds_map_add(armas[5], "automatic", true);
+ds_map_add(armas[5], "effect", [noone]);
+ds_map_add(armas[5], "projetil_quant", 1);
+ds_map_add(armas[5], "perfurante", false);
+ds_map_add(armas[5], "explosivo", false);
+
 
 var map = armas[weapon];
 sprite = map[? "sprite"]; //ARMAZENAR OS VALORES EM VARIAVEIS
@@ -34,3 +95,7 @@ vel_projetil = map[? "vel_projetil"];
 projetil_dano = map[? "projetil_dano"];
 projetil_delay = map[? "projetil_delay"];
 automatic = map[? "automatic"];
+effect = map[? "effect"];
+projetil_quant = map[? "projetil_quant"];
+perfurante = map[? "perfurante"];
+explosivo = map[? "explosivo"];
