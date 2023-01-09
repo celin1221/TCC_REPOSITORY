@@ -14,6 +14,7 @@ if(pause){
 if(keyboard_check_pressed(vk_escape)){
 	if(!pause){
 		pause = true;
+		window_set_cursor(cr_default);
 		
 		//desativando instancias 
 		//(lembrar de desativar manualmente animaçõese e timers)
@@ -31,6 +32,7 @@ if(keyboard_check_pressed(vk_escape)){
 		buffer_get_surface(pauseSurfBuffer, pauseSurf, 0);
 	}else{
 		pause = false;
+		window_set_cursor(cr_none);
 		instance_activate_all();
 		if(surface_exists(pauseSurf)){
 			surface_free(pauseSurf);

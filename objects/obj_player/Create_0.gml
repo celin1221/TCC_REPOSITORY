@@ -8,6 +8,7 @@ dano = 10;
 //Armas
 my_weapon = instance_create_layer(x, y, "Weapons", obj_weapon);
 my_weapon.weapon_id = self;
+arma = my_weapon.weapon;
 usandoMelee = false;
 comecou = false;
 alarm[4] = 12;

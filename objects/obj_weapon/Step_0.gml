@@ -6,6 +6,7 @@ if(instance_exists(weapon_id)){
 	weapon_x = x + lengthdir_x(10, weapon_dir);
 	weapon_y = y + lengthdir_y(10, weapon_dir);
 	
+	
 	function atirar(){
 		
 		if(!weapon > 0){
@@ -48,9 +49,10 @@ if(instance_exists(weapon_id)){
 			}
 			can_shoot = false;
 			alarm[0] = projetil_delay
-		} else if (weapon < 9){
+		} else if (weapon < 9){ //CAJADOS
 			var inimigo = instance_nearest(obj_crosshair.x, obj_crosshair.y, par_enemy);
 			var obstaculos_1 = instance_nearest(obj_crosshair.x, obj_crosshair.y, obj_stone1);
+			var foco = inimigo;
 			
 			if(inimigo != noone){
 				if((inimigo.x - x) <= 150 and (inimigo.y - y) <= 150){
@@ -61,18 +63,24 @@ if(instance_exists(weapon_id)){
 							explosao.efeitos = effect;
 						}
 					} else {
+						
+						if (obstaculos_1 != noone){
+							var dist_pedra = point_distance(obj_crosshair.x, obj_crosshair.y, obstaculos_1.x, obstaculos_1.y);
+							var dist_inimigo = point_distance(obj_crosshair.x, obj_crosshair.y, inimigo.x, inimigo.y);
+			
+							if (dist_pedra < dist_inimigo){
+								foco = "pedra";
+							} else {
+								foco = "inimigo";
+							}
+						}
 					
-						if(inimigo.hit == false){
+						if((inimigo.hit == false) and (foco == "inimigo")){
 							inimigo.vida -= projetil_dano;
-							obstaculos_1.vida -= projetil_dano;
 							inimigo.hit = true;
 							inimigo.alarm[0] = 15
-							
-							if (effect[0] == "Elétrico"){
-								var raiozin = instance_create_layer(inimigo.x, inimigo.y, "Projeteis", obj_raio);
-								raiozin.dano = effect[1];
-								raiozin.range = effect[2];
-							}
+						} else if (foco == "pedra"){
+							obstaculos_1.vida -= projetil_dano;
 						}
 					}
 					
