@@ -11,34 +11,37 @@ if(pause){
 	surface_reset_target();
 }
 
-if(keyboard_check_pressed(vk_escape)){
-	if(!pause){
-		pause = true;
-		window_set_cursor(cr_default);
+
+if (global.main_menu == false){
+	if(keyboard_check_pressed(vk_escape)){
+		if(!pause){
+			pause = true;
+			window_set_cursor(cr_default);
 		
-		//desativando instancias 
-		//(lembrar de desativar manualmente animaçõese e timers)
-		instance_deactivate_all(true);
+			//desativando instancias 
+			//(lembrar de desativar manualmente animaçõese e timers)
+			instance_deactivate_all(true);
 		
-		pauseSurf = surface_create(resW, resH);
-		surface_set_target(pauseSurf);
-		draw_surface(application_surface, 0 ,0);
-		surface_reset_target();
+			pauseSurf = surface_create(resW, resH);
+			surface_set_target(pauseSurf);
+			draw_surface(application_surface, 0 ,0);
+			surface_reset_target();
 		
-		if(buffer_exists(pauseSurfBuffer)){
-			buffer_delete(pauseSurfBuffer);
-		}
-		pauseSurfBuffer = buffer_create(resW*resH*4, buffer_fixed,1);
-		buffer_get_surface(pauseSurfBuffer, pauseSurf, 0);
-	}else{
-		pause = false;
-		window_set_cursor(cr_none);
-		instance_activate_all();
-		if(surface_exists(pauseSurf)){
-			surface_free(pauseSurf);
-		}
-		if(buffer_exists(pauseSurfBuffer)){
-			buffer_delete(pauseSurfBuffer);
+			if(buffer_exists(pauseSurfBuffer)){
+				buffer_delete(pauseSurfBuffer);
+			}
+			pauseSurfBuffer = buffer_create(resW*resH*4, buffer_fixed,1);
+			buffer_get_surface(pauseSurfBuffer, pauseSurf, 0);
+		}else{
+			pause = false;
+			window_set_cursor(cr_none);
+			instance_activate_all();
+			if(surface_exists(pauseSurf)){
+				surface_free(pauseSurf);
+			}
+			if(buffer_exists(pauseSurfBuffer)){
+				buffer_delete(pauseSurfBuffer);
+			}
 		}
 	}
 }

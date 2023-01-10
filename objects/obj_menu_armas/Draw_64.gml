@@ -34,11 +34,47 @@ for (var i = 0; i < tam_menu ; i++){
 			
 			switch menu_inicial[i]{
 			
-				case menu_inicial[0]: //Jogar
-					room_goto(MenuArmas);
+				case menu_inicial[0]: //Espada
+					global.arma = 0;
+					global.UsandoMelee = true;
+					room_goto(Ambiente1);
+					global.main_menu = false;
 					break;
-				case menu_inicial[1]: //Sair
-					game_end();
+				case menu_inicial[1]: //Arco Padrão
+					global.arma = 1;
+					global.UsandoMelee = false;
+					room_goto(Ambiente1);
+					global.main_menu = false;
+					break;
+				case menu_inicial[2]: //Arco com 3 Flechas
+					global.arma = 2;
+					global.UsandoMelee = false;
+					room_goto(Ambiente1);
+					global.main_menu = false;
+					break;
+				case menu_inicial[3]: //Arco Perfurante
+					global.arma = 3;
+					global.UsandoMelee = false;
+					room_goto(Ambiente1);
+					global.main_menu = false;
+					break;
+				case menu_inicial[4]: //Arco Explosivo
+					global.arma = 4;
+					global.UsandoMelee = false;
+					room_goto(Ambiente1);
+					global.main_menu = false;
+					break;
+				case menu_inicial[5]: //Cajado Padrão
+					global.arma = 5;
+					global.UsandoMelee = false;
+					room_goto(Ambiente1);
+					global.main_menu = false;
+					break;
+				case menu_inicial[6]: //Cajado de Gelo
+					global.arma = 6;
+					global.UsandoMelee = false;
+					room_goto(Ambiente1);
+					global.main_menu = false;
 					break;
 			}
 		}

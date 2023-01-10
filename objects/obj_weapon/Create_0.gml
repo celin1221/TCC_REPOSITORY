@@ -5,7 +5,7 @@ weapon_y = 0;
 can_shoot = true;
 atirando = false;
 
-weapon = 6; //ARMA USADA NO MOMENTO
+weapon = global.arma; //ARMA USADA NO MOMENTO
 
 armas[0] = ds_map_create();
 
@@ -26,9 +26,9 @@ ds_map_add(armas[0], "explosivo", false);
 armas[1] = ds_map_create();
 ds_map_add(armas[1], "sprite", spr_teste);
 ds_map_add(armas[1], "projetil", spr_teste_projetil);
-ds_map_add(armas[1], "vel_projetil", 3);
+ds_map_add(armas[1], "vel_projetil", 4);
 ds_map_add(armas[1], "projetil_dano", 5);
-ds_map_add(armas[1], "projetil_delay", 25);
+ds_map_add(armas[1], "projetil_delay", 18);
 ds_map_add(armas[1], "automatic", false);
 ds_map_add(armas[1], "effect", [noone]);
 ds_map_add(armas[1], "projetil_quant", 1);
@@ -65,7 +65,7 @@ ds_map_add(armas[3], "explosivo", false);
 armas[4] = ds_map_create();
 ds_map_add(armas[4], "sprite", spr_teste);
 ds_map_add(armas[4], "projetil", spr_teste_projetil);
-ds_map_add(armas[4], "vel_projetil", 2);
+ds_map_add(armas[4], "vel_projetil", 3);
 ds_map_add(armas[4], "projetil_dano", 6);
 ds_map_add(armas[4], "projetil_delay", 25);
 ds_map_add(armas[4], "automatic", false);

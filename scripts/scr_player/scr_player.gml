@@ -157,12 +157,12 @@ function scr_player_swordAtack(){
 				
 				with(InimigosID){
 					hit = true;
-					var direcao = point_direction(obj_player.x, obj_player.y, obj_enemy.x, obj_enemy.y);
+					var direcao = point_direction(obj_player.x, obj_player.y, other.x, other.y);
 					empurrar_dir = direcao;
 					empurrar_velc = 15;
 					state = scr_enemy_hit;
 					vida -= obj_player.dano;
-					alarm[0] = 180;
+					alarm[0] = 15;
 					
 				}
 			}

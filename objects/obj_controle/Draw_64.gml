@@ -6,7 +6,7 @@ var _huda = _guiaH - _spra;
 
 
 var vida = obj_player.vida;
-var vida_max = 100
+var vida_max = global.vidamax;
 
 var posicao_fill = (28 * (1 - (vida/vida_max))) * 3
 

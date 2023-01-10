@@ -6,6 +6,11 @@ if(alarm[1]<=0){
 
 estamina = clamp(estamina, 0, max_estamina);
 
+if (vida <= 0){
+	window_set_cursor(cr_default);
+	room_goto(MainMenu);
+}
+
 
 if (keyboard_check(ord("Q"))){
 		instance_destroy(my_weapon);
@@ -15,8 +20,8 @@ if (keyboard_check(ord("Q"))){
 		} else {
 			arma = 0
 		}
+		global.arma = arma;
 		my_weapon = instance_create_layer(x, y, "Weapons", obj_weapon);
-		my_weapon.weapon = arma
 		my_weapon.weapon_id = self;
 	} 
 

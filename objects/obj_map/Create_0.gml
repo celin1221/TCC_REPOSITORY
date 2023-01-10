@@ -50,8 +50,8 @@ for(var xx = 0; xx<cell_h; xx+=1){
 			}
 			
 			if(max_spawner>0){
-				var chances = 60;
-				var distance = 100
+				var chances = 20;
+				var distance = 80
 				if(irandom(1000)<chances && point_distance(x1,y1,obj_player.x, obj_player.y) > distance){
 				instance_create_layer(x1,y1, "Instances", obj_spawn);
 				max_spawner-=1;

@@ -9,7 +9,7 @@ dano = 10;
 my_weapon = instance_create_layer(x, y, "Weapons", obj_weapon);
 my_weapon.weapon_id = self;
 arma = my_weapon.weapon;
-usandoMelee = false;
+usandoMelee = global.UsandoMelee;
 comecou = false;
 alarm[4] = 12;
 
@@ -25,7 +25,9 @@ state = scr_player_andando;
 max_estamina = 100;
 estamina = max_estamina;
 
-vida = 100;
+
+global.vidamax = 10
+vida = global.vidamax;
 tomar_dano = true;
 empurrar_dir = 0;
 dano_alfa = -1;
