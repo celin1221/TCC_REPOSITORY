@@ -3,8 +3,8 @@ if(instance_exists(weapon_id)){
 	x = weapon_id.x;
 	y = weapon_id.y;
 	
-	weapon_x = x + lengthdir_x(10, weapon_dir);
-	weapon_y = y + lengthdir_y(10, weapon_dir);
+	weapon_x = x + lengthdir_x(1, weapon_dir);
+	weapon_y = y + lengthdir_y(1, weapon_dir);
 	
 	
 	function atirar(){

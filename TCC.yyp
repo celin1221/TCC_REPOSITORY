@@ -4,6 +4,7 @@
   "name": "TCC",
   "resources": [
     {"id":{"name":"scr_player","path":"scripts/scr_player/scr_player.yy",},"order":0,},
+    {"id":{"name":"spr_orbgelo","path":"sprites/spr_orbgelo/spr_orbgelo.yy",},"order":2,},
     {"id":{"name":"spr_teste_raio","path":"sprites/spr_teste_raio/spr_teste_raio.yy",},"order":3,},
     {"id":{"name":"f_arialB","path":"fonts/f_arialB/f_arialB.yy",},"order":0,},
     {"id":{"name":"scr_funcoes","path":"scripts/scr_funcoes/scr_funcoes.yy",},"order":1,},
@@ -106,6 +107,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.11.1.56",
+    "IDEVersion": "2022.9.1.51",
   },
 }

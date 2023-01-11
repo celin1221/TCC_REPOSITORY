@@ -89,7 +89,7 @@ ds_map_add(armas[5], "explosivo", false);
 
 //CAJADO DE GELO
 armas[6] = ds_map_create();
-ds_map_add(armas[6], "sprite", spr_teste);
+ds_map_add(armas[6], "sprite", spr_orbgelo);
 ds_map_add(armas[6], "projetil", spr_teste_raio);
 ds_map_add(armas[6], "vel_projetil", 0);
 ds_map_add(armas[6], "projetil_dano", 2);
