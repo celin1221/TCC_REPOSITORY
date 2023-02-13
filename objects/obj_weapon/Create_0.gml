@@ -93,7 +93,7 @@ ds_map_add(armas[6], "explosivo", true);
 //CAJADO DIFERENTE
 armas[7] = ds_map_create();
 ds_map_add(armas[7], "sprite", spr_livro);
-ds_map_add(armas[7], "projetil", spr_teste_raio);
+ds_map_add(armas[7], "projetil", spr_teste);
 ds_map_add(armas[7], "vel_projetil", 0);
 ds_map_add(armas[7], "projetil_dano", 1);
 ds_map_add(armas[7], "projetil_delay", 15);

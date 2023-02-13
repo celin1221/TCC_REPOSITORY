@@ -28,12 +28,11 @@ if (weapon > 4) and (weapon < 9){
 			
 			if (explosivo = true){
 				var beam_distance = point_distance(raio_x, raio_y, obj_crosshair.x, obj_crosshair.y);
-				var beam_direction = point_direction(raio_x, raio_y, obj_crosshair.x, obj_crosshair.y);
-				draw_sprite_ext(spr_teste_raio, 0, raio_x, raio_y, beam_distance/sprite_get_width(spr_teste_raio), 1, weapon_dir, c_white, 1); 
+				var beam_direction = point_direction(raio_x, raio_y, obj_crosshair.x, obj_crosshair.y); 
 			} else {
 				var beam_distance = point_distance(raio_x, raio_y, foco.x, foco.y);
 				var beam_direction = point_direction(raio_x, raio_y, foco.x, foco.y);
-				draw_sprite_ext(spr_teste_raio, 0, raio_x, raio_y, beam_distance/sprite_get_width(spr_teste_raio), 1, beam_direction, c_white, 1); 
+				draw_sprite_ext(spr_teste_raio, -1, raio_x, raio_y, beam_distance/sprite_get_width(spr_teste_raio), 1, beam_direction, c_white, 1); 
 			}
 		}
 	}
