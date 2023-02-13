@@ -8,7 +8,7 @@ estamina = clamp(estamina, 0, max_estamina);
 
 if (vida <= 0){
 	window_set_cursor(cr_default);
-	room_goto(MainMenu);
+	room_goto(TelaFinal);
 }
 
 
@@ -44,4 +44,18 @@ if(!usandoMelee){
 			}
 		}
 	}
+}
+
+if(segundo == false){
+	alarm[5] = 60;
+	global.tempoS1+=1;
+	if(global.tempoS1>=10){
+		global.tempoS2+=1;
+		global.tempoS1=0;
+	}
+	if(global.tempoS2>=6){
+		global.tempoM+=1;
+		global.tempoS2=0;
+	}
+	segundo = true;
 }

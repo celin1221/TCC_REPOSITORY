@@ -3,6 +3,10 @@
 global.level = 0;
 global.kill_count = 0;
 global.kill_need= 20;
+global.tempoS1 = 0;
+global.tempoS2 = 0;
+global.tempoM = 0;
+global.score = 0;
 function scr_player_anda(){
 	var dir_right = keyboard_check(ord("D"));
 	var dir_left = keyboard_check(ord("A"));
@@ -188,3 +192,4 @@ function scr_player_hit(){
 		state = scr_player_andando;
 	}
 }
+

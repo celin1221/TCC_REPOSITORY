@@ -4,7 +4,7 @@
 var _mx = device_mouse_x_to_gui(0);
 var _my = device_mouse_y_to_gui(0);
 
-draw_sprite_stretched_ext(spr_teste_projetil_area, -1, 0, 0, display_get_gui_width(), display_get_gui_height(), c_black, 1);
+draw_sprite_stretched_ext(spr_back, -1, 0, 0, display_get_gui_width(), display_get_gui_height(), c_white, 1);
 
 
 draw_set_font(f_arialB);
@@ -58,19 +58,13 @@ for (var i = 0; i < tam_menu ; i++){
 					room_goto(Ambiente1);
 					global.main_menu = false;
 					break;
-				case menu_inicial[4]: //Arco Explosivo
-					global.arma = 4;
-					global.UsandoMelee = false;
-					room_goto(Ambiente1);
-					global.main_menu = false;
-					break;
-				case menu_inicial[5]: //Cajado Padrão
+				case menu_inicial[4]: //Cajado Padrão
 					global.arma = 5;
 					global.UsandoMelee = false;
 					room_goto(Ambiente1);
 					global.main_menu = false;
 					break;
-				case menu_inicial[6]: //Cajado de Gelo
+				case menu_inicial[5]: //Cajado de Gelo
 					global.arma = 6;
 					global.UsandoMelee = false;
 					room_goto(Ambiente1);

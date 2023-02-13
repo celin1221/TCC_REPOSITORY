@@ -4,7 +4,7 @@
 var _mx = device_mouse_x_to_gui(0);
 var _my = device_mouse_y_to_gui(0);
 
-draw_sprite_stretched_ext(spr_teste_projetil_area, -1, 0, 0, display_get_gui_width(), display_get_gui_height(), c_black, 1);
+draw_sprite_stretched_ext(spr_back, -1, 0, 0, display_get_gui_width(), display_get_gui_height(), c_white, 1);
 
 
 draw_set_font(f_arialB);

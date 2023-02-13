@@ -5,6 +5,9 @@ velc = 3.0;
 move_dir = 0;
 dano = 10;
 
+
+segundo = false;
+
 //Armas
 my_weapon = instance_create_layer(x, y, "Weapons", obj_weapon);
 my_weapon.weapon_id = self;
